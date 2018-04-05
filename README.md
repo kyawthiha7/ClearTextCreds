@@ -1,4 +1,4 @@
-# ClearTextCreds
+# Clear Text Credentials Dump on windows 
 
 ## Impacket
 
