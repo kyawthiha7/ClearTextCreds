@@ -103,3 +103,4 @@ john –rules=all –fork=2 NT.out
 
 ## Reference 
 https://pentestlab.blog/2018/04/04/dumping-clear-text-credentials/
+https://blog.ropnop.com/extracting-hashes-and-domain-info-from-ntds-dit/
