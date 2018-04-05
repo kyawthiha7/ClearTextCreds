@@ -70,7 +70,7 @@ lazagne all
 ntdsutil “ac i ntds” “ifm” “create full c:\temp” q q
 ```
 
-- install esbexport
+- install esdbexport
 ```
 wget https://github.com/libyal/libesedb/releases/download/20170121/libesedb-experimental-20170121.tar.gz
 
